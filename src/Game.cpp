@@ -429,7 +429,7 @@ void Game::mainloop()
 
     scene.add(SphereHelperRef(new SphereHelper(vec3(1, 1, 0))));
 
-    // std::thread physicsThreads(&Game::physicsLoop, this);
+    std::thread physicsThreads(&Game::physicsLoop, this);
     /* Main Loop */
     while (state != AppState::quit)
     {
@@ -449,8 +449,6 @@ void Game::mainloop()
         // vec3 l(0, 1, 0);
         // vec3 r(1, 0, 0);
         // capsule->updateData(l * cos(time) + r * sin(time), l * cos(time + (float)PI) + r * sin(time + (float)PI), 0.25);
-
-        physicsEngine.tick(1.f / 50.0f);
 
         /* UI & 2D Render */
         glEnable(GL_BLEND);
