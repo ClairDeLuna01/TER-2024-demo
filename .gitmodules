@@ -1,0 +1,6 @@
+[submodule "Engine"]
+	path = Engine
+	url = git@github.com:MonsieurBleu/Vulpine-Engine.git
+[submodule "build/shader"]
+	path = build/shader
+	url = git@github.com:MonsieurBleu/VESL--Vulpine-Engine-Shader-Library.git
